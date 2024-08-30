@@ -34,8 +34,8 @@
   },
   "name":"Polterguest",
   "resources":[
+    {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
-    {"id":{"name":"spr_test_sprite","path":"sprites/spr_test_sprite/spr_test_sprite.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
