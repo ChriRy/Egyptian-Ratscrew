@@ -34,13 +34,14 @@
   },
   "name":"Polterguest",
   "resources":[
-    {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"rm_demo","path":"rooms/rm_demo/rm_demo.yy",},},
+    {"id":{"name":"spr_mansion_halls","path":"sprites/spr_mansion_halls/spr_mansion_halls.yy",},},
+    {"id":{"name":"ts_mansion_halls","path":"tilesets/ts_mansion_halls/ts_mansion_halls.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm_demo","path":"rooms/rm_demo/rm_demo.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
