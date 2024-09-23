@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_mansion_halls",
   "bboxMode":0,
-  "bbox_bottom":240,
+  "bbox_bottom":626,
   "bbox_left":0,
   "bbox_right":63,
   "bbox_top":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":256,
+  "height":1028,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"bb6de8ff-f625-44d4-81b4-da5b3671350f","blendMode":0,"displayName":"default","isLocked":false,"name":"bb6de8ff-f625-44d4-81b4-da5b3671350f","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},

@@ -16,5 +16,9 @@
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
-  "ResourceOrderSettings":[],
+  "ResourceOrderSettings":[
+    {"name":"rm_card_test","order":1,"path":"rooms/rm_card_test/rm_card_test.yy",},
+    {"name":"spr_card_template","order":2,"path":"sprites/spr_card_template/spr_card_template.yy",},
+    {"name":"spr_cards_basic","order":1,"path":"sprites/spr_cards_basic/spr_cards_basic.yy",},
+  ],
 }

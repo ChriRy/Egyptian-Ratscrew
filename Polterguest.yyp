@@ -30,17 +30,22 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.2.162",
+    "IDEVersion":"2024.8.1.171",
   },
   "name":"Polterguest",
   "resources":[
+    {"id":{"name":"obj_deck","path":"objects/obj_deck/obj_deck.yy",},},
+    {"id":{"name":"rm_card_test","path":"rooms/rm_card_test/rm_card_test.yy",},},
     {"id":{"name":"rm_demo","path":"rooms/rm_demo/rm_demo.yy",},},
+    {"id":{"name":"spr_card_template","path":"sprites/spr_card_template/spr_card_template.yy",},},
+    {"id":{"name":"spr_cards_basic","path":"sprites/spr_cards_basic/spr_cards_basic.yy",},},
     {"id":{"name":"spr_mansion_halls","path":"sprites/spr_mansion_halls/spr_mansion_halls.yy",},},
     {"id":{"name":"ts_mansion_halls","path":"tilesets/ts_mansion_halls/ts_mansion_halls.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"rm_card_test","path":"rooms/rm_card_test/rm_card_test.yy",},},
     {"roomId":{"name":"rm_demo","path":"rooms/rm_demo/rm_demo.yy",},},
   ],
   "templateType":"game",
