@@ -6,7 +6,7 @@
 //		//draw_text(x+(20*i)+5, y+50, deck[|i]);
 //	}
 //}
-if key_down
+if keyboard_check_pressed(vk_down)
 {	
 	var deck_remaining = int64(ds_list_size(deck)) - 1;
 	

@@ -1,7 +1,6 @@
 {
 	deck = ds_list_create();
 	draw_pile = ds_list_create();
-	key_down = false;
 	
 	CARDS_IN_DECK = 52;
 	
