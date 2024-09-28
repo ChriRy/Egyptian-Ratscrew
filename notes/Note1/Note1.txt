@@ -1,0 +1,17 @@
+Card Sprites Key
+
+1: back of card art
+2-5: Ace (1)
+6-9: Two
+10-13: Three
+14-17: Four
+18-21: Five
+22-25: Six
+26-29: Seven
+30-33: Eight
+34-37: Nine
+38-41: Ten
+42-45: Jack (11)
+46-49: Queen (12)
+50-53: King (13)
+Joker? (14)

@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_draw_pile_player",
+  "%Name":"scr_turn_indicator",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_draw_pile_player",
+  "name":"scr_turn_indicator",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

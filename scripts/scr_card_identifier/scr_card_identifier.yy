@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_draw_pile_center",
+  "%Name":"scr_card_identifier",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_draw_pile_center",
+  "name":"scr_card_identifier",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",
