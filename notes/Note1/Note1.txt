@@ -17,4 +17,3 @@
 
 
 Bugs
-- some cards aren't matching the value they're supposed to have (a 10 is read as a 9, etc.)

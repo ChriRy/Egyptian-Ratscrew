@@ -3,7 +3,7 @@
 function check_card_pile(_pile)
 {
 	var _size = ds_list_size(_pile) - 1;
-	//ds_list_sort(_pile, true);
+	ds_list_sort(_pile, true);
 	
 	show_debug_message("---");
 	for (var i = 0; i < _size; i++)
