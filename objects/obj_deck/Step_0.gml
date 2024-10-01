@@ -2,14 +2,12 @@
 if (global.turn_indicator && keyboard_check(ord("D")) && ds_queue_size(p1_pile) > 0)
 {
 	scr_play_card(center_pile, p1_pile);
-	global.turn_indicator = !global.turn_indicator;
 }
 		
 // Play a card, P2 turn
 if (!global.turn_indicator && keyboard_check(vk_right) && ds_queue_size(p2_pile) > 0)
 {
 	scr_play_card(center_pile, p2_pile);
-	global.turn_indicator = !global.turn_indicator;
 }
 
 // Slap button, P1 or P2. Only happens if there are actually cards in the center pile. 

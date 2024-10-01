@@ -5,11 +5,11 @@
 ///@param {int} y: the y-coordinate where the sprite will be drawn
 function draw_center_pile(_center_pile, _card_sprite, x, y)
 {
-	var _center_count = ds_list_size(_center_pile);
-	if (_center_count > 0)
+	var _center_pile_size = ds_list_size(_center_pile) - 1;
+	if (ds_list_size(_center_pile) > 0)
 	{
-		sprite_number = ds_list_find_value(_center_pile, _center_count - 1);
-		draw_sprite(_card_sprite, sprite_number, x, y)
+		var _sprite_number = _center_pile[|_center_pile_size];
+		draw_sprite(_card_sprite, _sprite_number, x, y)
 	}
 }
 

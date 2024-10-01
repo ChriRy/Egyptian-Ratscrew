@@ -1,17 +1,20 @@
-Card Sprites Key
+//Card Sprites Key
 
-1: back of card art
-2-5: Ace (1)
-6-9: Two
-10-13: Three
-14-17: Four
-18-21: Five
-22-25: Six
-26-29: Seven
-30-33: Eight
-34-37: Nine
-38-41: Ten
-42-45: Jack (11)
-46-49: Queen (12)
-50-53: King (13)
-Joker? (14)
+//0: back of card art
+//1-4: Ace
+//5-8: Two
+//9-12: Three
+//13-16: Four
+//17-20: Five
+//21-24: Six
+//25-28: Seven
+//29-32: Eight
+//33-36: Nine
+//37-40: Ten
+//41-44: Jack (11)
+//45-48: Queen (12)
+//49-52: King (13)
+
+
+Bugs
+- some cards aren't matching the value they're supposed to have (a 10 is read as a 9, etc.)

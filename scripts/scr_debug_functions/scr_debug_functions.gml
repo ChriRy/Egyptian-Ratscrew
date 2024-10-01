@@ -3,7 +3,7 @@
 function check_card_pile(_pile)
 {
 	var _size = ds_list_size(_pile) - 1;
-	ds_list_sort(_pile, true);
+	//ds_list_sort(_pile, true);
 	
 	show_debug_message("---");
 	for (var i = 0; i < _size; i++)
@@ -12,6 +12,8 @@ function check_card_pile(_pile)
 	}
 	show_debug_message("---");
 }
+
+
 
 /// @function check_card_values(_center_pile);
 /// @param {ds_list} _center_pile: list representing the cards in center pile
