@@ -18,6 +18,12 @@ function scr_slap_check(_center_pile)
 }
 
 
+
+
+
+
+
+
 /// @function get_top_cards(_center_pile);
 /// @param {ds_list} _center_pile: list representing the cards in center pile
 /// @return {ds_list} top_card: a list containing the top 3 card values from _center_pile

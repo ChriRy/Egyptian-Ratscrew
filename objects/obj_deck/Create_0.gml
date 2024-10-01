@@ -50,6 +50,10 @@ center_pile = ds_list_create();
 p1_pile = ds_queue_create();
 p2_pile = ds_queue_create();
 
+// Create variables that keep track of who slapped first
+p1_slap_time = -1;
+p2_slap_time = -1;
+
 // Shuffles the card values in the deck
 shuffle_deck(center_pile);
 

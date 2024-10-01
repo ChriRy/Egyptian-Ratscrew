@@ -14,13 +14,15 @@ function scr_play_card(_center_pile, _player_pile)
 	turn_change();
 }
 
+
+
 ///@function take_deck(_center_pile, _player_pile);
 ///@param {ds_list} _center_pile: list representing cards in the center pile
 ///@param {ds_queue} _player_pile: list representing cards in a player's hand
 function take_deck(_center_pile, _player_pile)
 {
 	// Gets the number of cards currently in the center pile
-	var _center_pile_size = ds_list_size(_center_pile) - 1;
+	var _center_pile_size = ds_list_size(_center_pile);
 	
 	for (i = 0; i < _center_pile_size; i++)
 	{
