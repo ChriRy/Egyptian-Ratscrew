@@ -1,21 +1,108 @@
-// -------------------------------------------------------------------------------------- P1 Controls
-
-// P1 play card
-if (global.turn_indicator && keyboard_check(ord("D")) && ds_queue_size(p1_pile) > 0)
+// -------------------------------------------------------------------------------------- Ending the game
+if (ds_queue_size(p1_pile) == 0 || ds_queue_size(p2_pile) == 0)
 {
-	scr_play_card(center_pile, p1_pile);
+	if (ds_queue_size(p1_pile) == 0)
+	{
+		draw_text(640, 640, "P2 wins!");
+	}
+	else
+	{
+		draw_text(640, 640, "P1 wins!");
+	}
+	
+	draw_text(640, 680, "Press the space bar to play again")
+	
+	while (!keyboard_check(vk_space))
+	{}
+	
+	game_restart();
 }
 
+// -------------------------------------------------------------------------------------- Playing Cards
+
+
+// P1 turn
+if (global.turn_indicator)
+{
+	if (keyboard_check_pressed(ord("D")))
+	{
+		// takes the top card of the player pile and puts it on the center pile
+		var _top_card = ds_queue_dequeue(p1_pile);
+		ds_list_add(center_pile, _top_card);
+			
+		// checks the value of the card	
+		var _card_value = scr_card_identifier(_top_card);
+		show_debug_message("The card value is " + string(_card_value) + " [" + string(_top_card) + "] ");		
+		
+		// if the card is an ace, jack, queen, or king, a force-play loop starts
+		if (_card_value == 1 || _card_value >= 11)
+		{
+			force_play_loop = true;
+			force_play_count = face_card_indentifier(_card_value)
+			turn_change();
+		}
+		// If a force play is currently happening and the card played isn't a face card, the force_play_count decrements
+		else if (force_play_loop && force_play_count > 0)
+		{
+			force_play_count -= 1;
+			show_debug_message("Force play is at " + string(force_play_count));
+		}
+		else if (!force_play_loop)
+		{
+			turn_change();
+		}
+	}
+}
+
+// P2 turn
+if (!global.turn_indicator)
+{
+	if (keyboard_check_pressed(vk_right))
+	{
+		var _top_card = ds_queue_dequeue(p2_pile);
+		ds_list_add(center_pile, _top_card);
+		
+	
+		var _card_value = scr_card_identifier(_top_card);
+		show_debug_message("The card value is " + string(_card_value) + " [" + string(_top_card) + "] ");		
+		
+		if (_card_value == 1 || _card_value >= 11)
+		{
+			force_play_loop = true;
+			force_play_count = face_card_indentifier(_card_value)
+			turn_change();
+		}
+		else if (force_play_loop && force_play_count > 0)
+		{
+			force_play_count -= 1;
+		}
+		else if (!force_play_loop)
+		{
+			turn_change();
+		}
+	}
+}
+
+if (force_play_loop && force_play_count == 0)
+{
+	force_play_loop = false;
+	force_play_count = 0;
+	
+	if (global.turn_indicator)
+	{
+		take_deck(center_pile, p2_pile);
+	}
+	else if (!global.turn_indicator)
+	{	
+		take_deck(center_pile, p1_pile);
+	}
+}
+
+
+// -------------------------------------------------------------------------------------- Slap Time Variables
 if (keyboard_check_pressed(ord("A")))
 {
 	p1_slap_time = current_time;
-}
-
-
-// -------------------------------------------------------------------------------------- P2 Controls
-if (!global.turn_indicator && keyboard_check(vk_right) && ds_queue_size(p2_pile) > 0)
-{
-	scr_play_card(center_pile, p2_pile);
 }
 
 if (keyboard_check_pressed(vk_left))
@@ -52,10 +139,12 @@ function slap_speed_check(_p1_slap_time, _p2_slap_time)
 }
 
 
-
 // Slap button, P1 or P2. Only happens if there are actually cards in the center pile. 
 if (ds_list_size(center_pile) > 0 && ((keyboard_check(vk_left)) || keyboard_check(ord("A"))))
 {
+	//indicates that a slap check is happening so that the function doesn't run over and over
+	slap_check_happening = true;
+	
 	// Get the times from the variables representing who slapped when and put them in the slap_speed_check
 	// function to see who slapped first. 
 	var _first_slap = slap_speed_check(p1_slap_time, p2_slap_time);
@@ -73,11 +162,7 @@ if (ds_list_size(center_pile) > 0 && ((keyboard_check(vk_left)) || keyboard_chec
 	{
 		_first_slap_pile = p2_pile;
 	}
-	// Times are equal or there is an error somewhere
-	else
-	{
-		show_debug_message("Else statement reached in obj_card step event");
-	}
+
 	
 
 	var _slap_condition = scr_slap_check(center_pile);
@@ -86,16 +171,27 @@ if (ds_list_size(center_pile) > 0 && ((keyboard_check(vk_left)) || keyboard_chec
 		show_debug_message("Slap condition present");
 		take_deck(center_pile, _first_slap_pile);
 	}
-	else
+	else if (!_slap_condition && alarm[0] = 0)
 	{
 		show_debug_message("Slap condition not present");
+		var penalty_card = ds_queue_dequeue(_first_slap_pile);
+		ds_list_insert(center_pile, 0, penalty_card);
 	}
 	
-	// Reset times after checking
-    p1_slap_time = -1;
-    p2_slap_time = -1;
+    // Delaying the reset of slap times until after the slap check completes fully
+    alarm[0] = 5; // Set alarm to reset slap times after a brief delay
 }
 
+
+// In alarm[0], reset the slap times and flag
+if (alarm[0] == 0)
+{
+    p1_slap_time = -1;
+    p2_slap_time = -1;
+    slap_check_happening = false; // Reset flag after the check completes
+    force_play_loop = false;
+    force_play_count = 0;
+}
 
 //debugging stuff
 if (keyboard_check_pressed(vk_enter))

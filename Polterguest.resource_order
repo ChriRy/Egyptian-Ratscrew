@@ -30,7 +30,6 @@
     {"name":"spr_card_template","order":4,"path":"sprites/spr_card_template/spr_card_template.yy",},
     {"name":"spr_cards_basic","order":1,"path":"sprites/spr_cards_basic/spr_cards_basic.yy",},
     {"name":"spr_turn_indicator","order":3,"path":"sprites/spr_turn_indicator/spr_turn_indicator.yy",},
-    {"name":"Sprite6","order":16,"path":"sprites/Sprite6/Sprite6.yy",},
     {"name":"ts_card_board","order":1,"path":"tilesets/ts_card_board/ts_card_board.yy",},
   ],
 }

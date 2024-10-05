@@ -1,21 +1,3 @@
-///@function scr_play_card(center_pile, player_pile)
-///@param {ds_list} _center_pile: list representing cards in the center pile
-///@param {ds_queue} _player_pile: list representing cards in a player's hand
-function scr_play_card(_center_pile, _player_pile)
-{
-	// Takes top card from current player's pile and puts it on the center stack
-	var _top_card = ds_queue_dequeue(_player_pile);
-	ds_list_add(_center_pile, _top_card);
-	
-	// Checks to see if the card played is a face card, and if it is a force-play loop is started. 
-	var _card_value = scr_card_identifier(_top_card);
-	show_debug_message("The card value is " + string(_card_value) + " [" + string(_top_card) + "] ");
-	
-	turn_change();
-}
-
-
-
 ///@function take_deck(_center_pile, _player_pile);
 ///@param {ds_list} _center_pile: list representing cards in the center pile
 ///@param {ds_queue} _player_pile: list representing cards in a player's hand
@@ -30,6 +12,7 @@ function take_deck(_center_pile, _player_pile)
 	}
 	ds_list_clear(_center_pile);
 }
+
 
 
 ///@function face_card_played(_card_value);

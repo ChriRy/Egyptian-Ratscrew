@@ -52,7 +52,6 @@
     {"id":{"name":"spr_cards_basic","path":"sprites/spr_cards_basic/spr_cards_basic.yy",},},
     {"id":{"name":"spr_mansion_halls","path":"sprites/spr_mansion_halls/spr_mansion_halls.yy",},},
     {"id":{"name":"spr_turn_indicator","path":"sprites/spr_turn_indicator/spr_turn_indicator.yy",},},
-    {"id":{"name":"Sprite6","path":"sprites/Sprite6/Sprite6.yy",},},
     {"id":{"name":"ts_card_board","path":"tilesets/ts_card_board/ts_card_board.yy",},},
     {"id":{"name":"ts_mansion_halls","path":"tilesets/ts_mansion_halls/ts_mansion_halls.yy",},},
   ],

@@ -54,11 +54,21 @@ p2_pile = ds_queue_create();
 p1_slap_time = -1;
 p2_slap_time = -1;
 
+// Create variables for implementing face card functionality
+force_play_loop = false;
+force_play_count = 0;
+
+// Variable to keep slap check from running too many times
+slap_check_happening = false
+
 // Shuffles the card values in the deck
 shuffle_deck(center_pile);
 
 // Deals the cards between p1_pile and p2_pile, leaving center_pile empty at the end
 deal_cards(center_pile, p1_pile, p2_pile);
+
+// Alarm for ensuring that slaps at wrong times cause players to wait. 
+alarm[0] = 0;
 
 
 
