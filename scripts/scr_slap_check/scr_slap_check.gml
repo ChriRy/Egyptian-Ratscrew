@@ -5,7 +5,7 @@ function scr_slap_check(_center_pile)
 {
 	// return array top card at 0, middle card at 1, bottom card at 2
 	var _top_three = get_top_cards(_center_pile);
-	
+
 	
 	if (check_for_double(_top_three) || check_for_sandwich(_top_three))
 	{
@@ -15,6 +15,7 @@ function scr_slap_check(_center_pile)
 	{
 		return false;
 	}
+	
 }
 
 
@@ -59,7 +60,7 @@ function get_top_cards(_center_pile)
 		_bottom_card = "x";
 	}
 	
-	show_debug_message("Top three card values are " + string(_center_pile[|_center_count - 1]) + " " + string(_center_pile[|_center_count - 2]) + " " + string(_center_pile[|_center_count - 3]));
+	//show_debug_message("Top three card values are " + string(_center_pile[|_center_count - 1]) + " " + string(_center_pile[|_center_count - 2]) + " " + string(_center_pile[|_center_count - 3]));
 	
 	return [_top_card, _middle_card, _bottom_card];
 }

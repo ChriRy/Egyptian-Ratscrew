@@ -13,6 +13,8 @@ function check_card_pile(_pile)
 	show_debug_message("---");
 }
 
+
+
 /// @function check_card_values(_center_pile);
 /// @param {ds_list} _center_pile: list representing the cards in center pile
 function check_card_values(_center_pile)
