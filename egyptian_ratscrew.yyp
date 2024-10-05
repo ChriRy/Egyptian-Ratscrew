@@ -1,6 +1,6 @@
 {
   "$GMProject":"",
-  "%Name":"Polterguest",
+  "%Name":"egyptian_ratscrew",
   "AudioGroups":[
     {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
@@ -32,7 +32,7 @@
   "MetaData":{
     "IDEVersion":"2024.8.1.171",
   },
-  "name":"Polterguest",
+  "name":"egyptian_ratscrew",
   "resources":[
     {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},},
     {"id":{"name":"obj_deck","path":"objects/obj_deck/obj_deck.yy",},},
