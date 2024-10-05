@@ -15,4 +15,4 @@ Gamemaker uses it's own language, referred to as GML. It's very similar to Javas
 
 # Useful Websites
 
-* [Web Site Name](https://manual.gamemaker.io/monthly/en/#t=Content.htm&rhsearch=ds_list)
+* [Gamemaker Manual](https://manual.gamemaker.io/monthly/en/#t=Content.htm&rhsearch=ds_list)
