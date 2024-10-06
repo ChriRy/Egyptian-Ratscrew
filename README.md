@@ -5,7 +5,7 @@ This is a digital version of the card game 'Egyptian Ratscrew.' This beta versio
 Egyptian Ratscrew has always been one of my favorite card games, and I wanted to get to know Gamemaker Studio better, so this was the result. 
 
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Game Demo Video]([http://youtube.link.goes.here](https://youtu.be/dD_Ezv9MPwM))
 
 # Development Environment
 
