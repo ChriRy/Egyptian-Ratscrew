@@ -184,7 +184,7 @@ if (ds_list_size(center_pile) > 0 && ((keyboard_check(vk_left)) || keyboard_chec
 
 
 // In alarm[0], reset the slap times and flag
-if (alarm[0] == 0)
+if (alarm[0] == 0 && slap_check_happening)
 {
     p1_slap_time = -1;
     p2_slap_time = -1;
